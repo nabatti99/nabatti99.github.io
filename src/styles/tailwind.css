@@ -227,7 +227,7 @@
 }
 
 .breadcrumb-nav li {
-    @apply relative text-black after:absolute after:-right-8 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:bg-[url(/assets/img/icons/icon-black-chevron-right-solid.svg)] after:bg-cover last:font-semibold last:text-ColorBlue last:after:bg-none;
+    @apply relative text-black after:absolute after:-right-8 after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:bg-cover last:font-semibold last:text-ColorBlue last:after:bg-none;
 }
 
 .breadcrumb-nav a {

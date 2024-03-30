@@ -8,20 +8,20 @@ dotenv.config({
 const config: GatsbyConfig = {
     graphqlTypegen: true,
     plugins: [
-        {
-            resolve: "gatsby-source-contentful",
-            options: {
-                accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
-                spaceId: process.env.CONTENTFUL_SPACE_ID,
-                downloadLocal: true,
-            },
-        },
+        // {
+        //     resolve: "gatsby-source-contentful",
+        //     options: {
+        //         accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+        //         spaceId: process.env.CONTENTFUL_SPACE_ID,
+        //         downloadLocal: true,
+        //     },
+        // },
         `gatsby-plugin-image`,
         {
             resolve: `gatsby-source-filesystem`,
             options: {
                 name: `images`,
-                path: `${__dirname}/static/assets/img/favicon.png`,
+                path: `${__dirname}/static/img/favicon.png`,
             },
         },
         `gatsby-plugin-postcss`,
