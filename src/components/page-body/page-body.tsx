@@ -51,9 +51,9 @@ const PageBody: React.FC<{
                             {/* <!-- Text Logo --> */}
                             <div className="text-logo">
                                 <a href="/">
-                                    <div className="logo-symbol">A</div>
+                                    <div className="logo-symbol">M</div>
                                     <div className="logo-text">
-                                        Alex <span>Smith</span>
+                                        Minh <span>Nguyen</span>
                                     </div>
                                 </a>
                             </div>
