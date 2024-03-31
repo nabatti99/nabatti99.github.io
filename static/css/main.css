@@ -1419,7 +1419,6 @@ td {
 
 .page-title .page-subtitle {
     display: inline-block;
-    position: absolute;
     top: 0;
     right: 70px;
 }
@@ -2041,6 +2040,10 @@ ul.social-links li:last-child a {
     color: #666;
     opacity: 0.7;
     margin-left: 5px;
+}
+
+.timeline-item a.item-company:hover {
+    color: #28a745;
 }
 
 .timeline-item .item-title {
