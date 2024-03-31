@@ -102,27 +102,27 @@ const PageBody: React.FC<{
                         <div className="footer-social">
                             <ul className="footer-social-links">
                                 <li>
-                                    <a href="/#" target="_blank">
+                                    <a href="https://github.com/nabatti99" target="_blank">
                                         Github
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="/#" target="_blank">
+                                    <a href="https://www.facebook.com/nguyenanhminh02" target="_blank">
                                         Facebook
                                     </a>
                                 </li>
 
                                 <li>
-                                    <a href="/#" target="_blank">
-                                        Instagram
+                                    <a href="https://t.me/nabatti99" target="_blank">
+                                        Telegram
                                     </a>
                                 </li>
                             </ul>
                         </div>
 
                         <div className="footer-copyrights">
-                            <p>Nguyễn Lê Anh Minh - Full-stack Developer</p>
+                            <p>Nguyen Le Anh Minh - Full-stack Developer</p>
                         </div>
                     </footer>
                     {/* <!-- /Footer --> */}

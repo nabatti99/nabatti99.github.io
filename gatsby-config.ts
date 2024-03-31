@@ -28,7 +28,6 @@ const config: GatsbyConfig = {
                 path: `${__dirname}/static/img/favicon.png`,
             },
         },
-        `gatsby-plugin-postcss`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
     ],
