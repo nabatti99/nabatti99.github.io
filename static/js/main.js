@@ -184,13 +184,11 @@
         $('head').append('<style data-styles="leven-theme-skills-css" type="text/css">' + custom_styles + '</style>');
     }
 
-    //On Window load & Resize
+    // Animation on Page Loading
+    $(".preloader").fadeOut( 800, "linear" );
+    animateLayout();
+
     $(window)
-        .on('load', function() { //Load
-            // Animation on Page Loading
-            $(".preloader").fadeOut( 800, "linear" );
-            animateLayout();
-        })
         .on('hashchange', function(event) {
             if(location.hash) {
                 ajaxLoader();
