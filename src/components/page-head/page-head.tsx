@@ -6,25 +6,31 @@ const PageHead: React.FC<{
     return (
         <>
             <meta charSet="UTF-8" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <title>{[title, "Passgenix Solution"].filter(Boolean).join(" | ")}</title>
-            <meta name="description" content="Your page description" />
+            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <meta name="keywords" content="portfolio, AI Engineer, blockchain, full-stack developer" />
+            <meta name="author" content="lmpixels" />
+            <link rel="shortcut icon" href="favicon.ico"></link>
+            <title>{[title, "Nguyễn Lê Anh Minh"].filter(Boolean).join(" | ")}</title>
+            <meta name="description" content="Nguyễn Lê Anh Minh portfolio" />
 
             {/* <!-- Favicon  --> */}
-            <link rel="icon" href="/assets/img/favicon.png" />
+            <link rel="icon" href="/img/favicon.png" />
 
             {/* <!-- Icon Font --> */}
-            <link rel="stylesheet" href="/assets/fonts/iconfonts/font-awesome/stylesheet.css" />
+            <link rel="stylesheet" href="/css/fonts/iconfonts/font-awesome/stylesheet.css" />
 
             {/* <!-- Site font --> */}
-            <link rel="stylesheet" href="/assets/fonts/webfonts/inter/stylesheet.css" />
-            <link rel="stylesheet" href="/assets/fonts/webfonts/plus-jakarta-sans/stylesheet.css" />
+            <link rel="stylesheet" href="/css/fonts/webfonts/inter/stylesheet.css" />
 
             {/* <!-- Vendor CSS --> */}
-            <link rel="stylesheet" href="/assets/css/vendors/swiper-bundle.min.css" />
+            <link rel="stylesheet" href="/css/normalize.css" type="text/css" />
+            <link rel="stylesheet" href="/css/bootstrap.min.css" type="text/css" />
+            <link rel="stylesheet" href="/css/owl.carousel.css" type="text/css" />
+            <link rel="stylesheet" href="/css/magnific-popup.css" type="text/css" />
 
             {/* <!-- Custom CSS --> */}
-            <link rel="stylesheet" href="/assets/css/custom.css" />
+            <link rel="stylesheet" href="/css/main.css" type="text/css" />
         </>
     );
 };

@@ -7,7 +7,7 @@ const PageBody: React.FC<{
         // Put custom scripts here
         const scriptInfos: Record<string, { path: string } & Record<string, any>> = {
             main_js: {
-                path: "/assets/js/main.js",
+                path: "/js/main.js",
             },
         };
 
@@ -26,17 +26,109 @@ const PageBody: React.FC<{
     }, []);
 
     return (
-        <div className="page-wrapper relative z-[1] bg-white">
-            {/* <!--...::: Header Start :::... --> */}
-            <header>Put your header HTML here</header>
-            {/* <!--...::: Header End :::... --> */}
+        <>
+            <div className="lm-animated-bg"></div>
 
-            <main className="main-wrapper relative overflow-hidden">{children}</main>
+            {/* <!-- Loading animation --> */}
+            <div className="preloader">
+                <div className="preloader-animation">
+                    <div className="preloader-spinner"></div>
+                </div>
+            </div>
+            {/* <!-- /Loading animation --> */}
 
-            {/* <!--...::: Footer Section Start :::... --> */}
-            <footer>Put your footer HTML here</footer>
-            {/* <!--...::: Footer Section End :::... --> */}
-        </div>
+            {/* <!-- Scroll To Top Button --> */}
+            <div className="lmpixels-scroll-to-top">
+                <i className="lnr lnr-chevron-up"></i>
+            </div>
+            {/* <!-- /Scroll To Top Button --> */}
+
+            <div className="page-scroll">
+                <div id="page_container" className="page-container bg-move-effect" data-animation="transition-flip-in-right">
+                    {/* <!-- Header --> */}
+                    <header id="site_header" className="header">
+                        <div className="header-content clearfix">
+                            {/* <!-- Text Logo --> */}
+                            <div className="text-logo">
+                                <a href="/">
+                                    <div className="logo-symbol">M</div>
+                                    <div className="logo-text">
+                                        Minh <span>Nguyen</span>
+                                    </div>
+                                </a>
+                            </div>
+                            {/* <!-- /Text Logo --> */}
+
+                            {/* <!-- Navigation --> */}
+                            <div className="site-nav mobile-menu-hide">
+                                <ul className="leven-classic-menu site-main-menu">
+                                    <li className="menu-item">
+                                        <a href="/">About Me</a>
+                                    </li>
+
+                                    <li className="menu-item">
+                                        <a href="/resume">Resume (CV)</a>
+                                    </li>
+
+                                    <li className="menu-item">
+                                        <a href="/projects">Projects</a>
+                                    </li>
+
+                                    <li className="menu-item">
+                                        <a href="/contact">Contact</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            {/* <!-- Mobile Menu Toggle --> */}
+                            <a className="menu-toggle mobile-visible">
+                                <i className="fa fa-bars"></i>
+                            </a>
+                            {/* <!-- Mobile Menu Toggle --> */}
+                        </div>
+                    </header>
+                    {/* <!-- /Header --> */}
+
+                    <main id="main" className="site-main">
+                        <div id="main-content" className="single-page-content">
+                            <div id="primary" className="content-area">
+                                {children}
+                            </div>
+                        </div>
+                    </main>
+
+                    {/* <!-- Footer --> */}
+                    <footer className="site-footer clearfix">
+                        <div className="footer-social">
+                            <ul className="footer-social-links">
+                                <li>
+                                    <a href="https://github.com/nabatti99" target="_blank">
+                                        Github
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.facebook.com/nguyenanhminh02" target="_blank">
+                                        Facebook
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://t.me/nabatti99" target="_blank">
+                                        Telegram
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div className="footer-copyrights">
+                            <p>Nguyen Le Anh Minh - Full-stack Developer</p>
+                        </div>
+                    </footer>
+                    {/* <!-- /Footer --> */}
+                </div>
+            </div>
+        </>
     );
 };
 
