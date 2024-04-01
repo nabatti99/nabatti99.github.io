@@ -137,33 +137,135 @@ const ResumePage: React.FC<PageProps> = () => {
                 <div className="row">
                     <div className=" col-xs-12 col-sm-12 ">
                         <div className="block-title p-20">
-                            <h2>Certificates</h2>
+                            <h2>Language & Efficiency</h2>
                         </div>
                     </div>
                 </div>
 
                 <div className="row">
                     <div className=" col-xs-12 col-sm-6 ">
-                        <a href="//lmpixels.com/wp/leven-wp/wp-content/uploads/2019/11/1.jpg" className="lightbox">
+                        <a href="/img/resume/toeic-certificate.jpg" className="lightbox">
                             <div className="certificate-item clearfix">
                                 <div className="certi-logo">
-                                    <img src="/img/clients/client-7.png" alt="logo" />
+                                    <img src="/img/resume/toeic-logo.png" alt="logo" />
                                 </div>
 
                                 <div className="certi-content">
                                     <div className="certi-title">
-                                        <h4>Psyhology of Intertnation Design</h4>
+                                        <h4>TOEIC: 765 Points</h4>
                                     </div>
 
                                     <div className="certi-id">
-                                        <span>Membership ID: XXXX</span>
+                                        <span>Valid until 27 February 2026</span>
                                     </div>
                                     <div className="certi-date">
-                                        <span>19 April 2018</span>
+                                        <span>27 February 2024</span>
                                     </div>
 
                                     <div className="certi-company">
                                         <span></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className=" col-xs-12 col-sm-12 ">
+                        <div className="block-title p-20">
+                            <h2>Certificates</h2>
+                        </div>
+                    </div>
+                </div>
+
+                <div className="row">
+                    <div className=" col-xs-12 col-sm-6">
+                        <a href="/img/resume/blockchain-basic-certificate.jpg" className="lightbox">
+                            <div className="certificate-item clearfix">
+                                <div className="certi-logo">
+                                    <img src="/img/resume/funix-logo.png" alt="logo" />
+                                </div>
+
+                                <div className="certi-content">
+                                    <div className="certi-title">
+                                        <h4>Blockchain Basic</h4>
+                                    </div>
+
+                                    <div className="certi-id">
+                                        <span>Reference: FX220347SC</span>
+                                    </div>
+                                    <div className="certi-date">
+                                        <span>19 January 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className=" col-xs-12 col-sm-6">
+                        <a href="/img/resume/smart-contract-certificate.jpg" className="lightbox">
+                            <div className="certificate-item clearfix">
+                                <div className="certi-logo">
+                                    <img src="/img/resume/funix-logo.png" alt="logo" />
+                                </div>
+
+                                <div className="certi-content">
+                                    <div className="certi-title">
+                                        <h4>Smart Contract</h4>
+                                    </div>
+
+                                    <div className="certi-id">
+                                        <span>Reference: FX220924SC</span>
+                                    </div>
+                                    <div className="certi-date">
+                                        <span>02 March 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className=" col-xs-12 col-sm-6">
+                        <a href="/img/resume/decentralized-application-development-certificate.jpg" className="lightbox">
+                            <div className="certificate-item clearfix">
+                                <div className="certi-logo">
+                                    <img src="/img/resume/funix-logo.png" alt="logo" />
+                                </div>
+
+                                <div className="certi-content">
+                                    <div className="certi-title">
+                                        <h4>Decentralized Application Development</h4>
+                                    </div>
+
+                                    <div className="certi-id">
+                                        <span>Reference: FX222515SC</span>
+                                    </div>
+                                    <div className="certi-date">
+                                        <span>21 May 2022</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                    <div className=" col-xs-12 col-sm-6">
+                        <a href="/img/resume/blockchain-platforms-certificate.jpg" className="lightbox">
+                            <div className="certificate-item clearfix">
+                                <div className="certi-logo">
+                                    <img src="/img/resume/funix-logo.png" alt="logo" />
+                                </div>
+
+                                <div className="certi-content">
+                                    <div className="certi-title">
+                                        <h4>Blockchain Platforms</h4>
+                                    </div>
+
+                                    <div className="certi-id">
+                                        <span>Reference: FX223000SC</span>
+                                    </div>
+                                    <div className="certi-date">
+                                        <span>16 June 2022</span>
                                     </div>
                                 </div>
                             </div>
