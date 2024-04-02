@@ -2,8 +2,103 @@ import { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 import PageBody from "../components/page-body/page-body";
 import PageHead from "../components/page-head/page-head";
+import { upperCaseFirstLetter } from "../utilities/text.util";
+import cls from "classnames";
 
 const ResumePage: React.FC<PageProps> = () => {
+    const codingSkillInfos = {
+        beginner: {
+            level: 1,
+            tooltip: "Know the basics, but not much experience",
+        },
+        intermediate: {
+            level: 2,
+            tooltip: "Have some experience, easily with common tasks",
+        },
+        advanced: {
+            level: 3,
+            tooltip: "Familiar with libraries and frameworks, can work independently",
+        },
+    };
+
+    const codingSkillsContents: {
+        name: string;
+        level: keyof typeof codingSkillInfos;
+    }[] = [
+        {
+            name: "HTML / CSS",
+            level: "advanced",
+        },
+        {
+            name: "JavaScript",
+            level: "advanced",
+        },
+        {
+            name: "ReactJS / NextJS / GastbyJS",
+            level: "advanced",
+        },
+        {
+            name: "Smart Contract / D-App",
+            level: "advanced",
+        },
+        {
+            name: "Python",
+            level: "intermediate",
+        },
+        {
+            name: "Tensorflow",
+            level: "intermediate",
+        },
+        {
+            name: "C#",
+            level: "beginner",
+        },
+    ];
+
+    const otherSkillInfos = {
+        beginner: {
+            level: 1,
+        },
+        intermediate: {
+            level: 2,
+        },
+        advanced: {
+            level: 3,
+        },
+    };
+
+    const otherSkillsContents: {
+        name: string;
+        level: keyof typeof otherSkillInfos;
+        tooltip: string;
+    }[] = [
+        {
+            name: "UI/UX Design",
+            level: "advanced",
+            tooltip: "Can design a website, mobile app, etc.",
+        },
+        {
+            name: "Graphic Design",
+            level: "intermediate",
+            tooltip: "Can design a logo, poster, banner, etc.",
+        },
+        {
+            name: "Problem Solving",
+            level: "advanced",
+            tooltip: "Give idea & solve problems quickly",
+        },
+        {
+            name: "Teamwork",
+            level: "intermediate",
+            tooltip: "Work well with 3-5 people in a team",
+        },
+        {
+            name: "Communication",
+            level: "intermediate",
+            tooltip: "Can communicate in English and Vietnamese",
+        },
+    ];
+
     return (
         <PageBody>
             <div className="page-title">
@@ -280,101 +375,53 @@ const ResumePage: React.FC<PageProps> = () => {
                 </div>
 
                 <div className="row">
-                    <div className=" col-xs-12 col-sm-6 ">
-                        <div className="block-title">
-                            <h2>Design Skills</h2>
-                        </div>
-
-                        <div id="skills_1" className="skills-info skills-first-style">
-                            {/* <!-- Skill 1 --> */}
-                            <div className="clearfix">
-                                <h4>UI/UX Design</h4>
-                                <div className="skill-value">95%</div>
-                            </div>
-
-                            <div id="skill_1" data-value="95" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 1 --> */}
-
-                            {/* <!-- Skill 2 --> */}
-                            <div className="clearfix">
-                                <h4>Print Design</h4>
-                                <div className="skill-value">75%</div>
-                            </div>
-
-                            <div id="skill_2" data-value="75" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 2 --> */}
-
-                            {/* <!-- Skill 3 --> */}
-                            <div className="clearfix">
-                                <h4>Graphic Design</h4>
-                                <div className="skill-value">85%</div>
-                            </div>
-                            <div id="skill_3" data-value="85" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- Skill 3 --> */}
-
-                            {/* <!-- Skill 4 --> */}
-                            <div className="clearfix">
-                                <h4>Logo Design</h4>
-                                <div className="skill-value">90%</div>
-                            </div>
-                            <div id="skill_4" data-value="90" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 4 --> */}
-                        </div>
-                    </div>
-
-                    <div className=" col-xs-12 col-sm-6 ">
+                    <div className="col-xs-12 col-sm-6">
                         <div className="block-title">
                             <h2>Coding Skills</h2>
                         </div>
 
-                        <div id="skills_2" className="skills-info skills-first-style">
-                            {/* <!-- Skill 5 --> */}
-                            <div className="clearfix">
-                                <h4>HTML / CSS</h4>
-                                <div className="skill-value">100%</div>
-                            </div>
-                            <div id="skill_5" data-value="100" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 5 --> */}
+                        <div className="skills-info skills-first-style">
+                            {codingSkillsContents.map((skill, index) => {
+                                const skillInfo = codingSkillInfos[skill.level];
+                                return (
+                                    <div key={index} className="clearfix">
+                                        <h4>{skill.name}</h4>
+                                        <div className="skill-value" data-bs-toggle="tooltip" data-bs-title={skillInfo.tooltip} data-bs-placement="right">
+                                            <span>{upperCaseFirstLetter(skill.level)}</span>
+                                            <div className="skill-level">
+                                                {[...Array(3)].map((_, i) => (
+                                                    <div key={index} className={cls("level-item", skillInfo.level >= i + 1 && `level-${i + 1}`)}></div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
+                        </div>
+                    </div>
 
-                            {/* <!-- Skill 6 --> */}
-                            <div className="clearfix">
-                                <h4>PHP</h4>
-                                <div className="skill-value">90%</div>
-                            </div>
-                            <div id="skill_6" data-value="90" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 6 --> */}
+                    <div className="col-xs-12 col-sm-6">
+                        <div className="block-title">
+                            <h2>Other Skills</h2>
+                        </div>
 
-                            {/* <!-- Skill 7 --> */}
-                            <div className="clearfix">
-                                <h4>JavaScript</h4>
-                                <div className="skill-value">90%</div>
-                            </div>
-                            <div id="skill_7" data-value="90" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 7 --> */}
-
-                            {/* <!-- Skill 8 --> */}
-                            <div className="clearfix">
-                                <h4>Smarty / Twig</h4>
-                                <div className="skill-value">85%</div>
-                            </div>
-                            <div id="skill_8" data-value="85" className="skill-container">
-                                <div className="skill-percentage"></div>
-                            </div>
-                            {/* <!-- /Skill 8 --> */}
+                        <div className="skills-info skills-first-style">
+                            {otherSkillsContents.map((skill, index) => {
+                                const skillInfo = otherSkillInfos[skill.level];
+                                return (
+                                    <div key={index} className="clearfix">
+                                        <h4>{skill.name}</h4>
+                                        <div className="skill-value" data-bs-toggle="tooltip" data-bs-title={skill.tooltip} data-bs-placement="right">
+                                            <span>{upperCaseFirstLetter(skill.level)}</span>
+                                            <div className="skill-level">
+                                                {[...Array(3)].map((_, i) => (
+                                                    <div key={index} className={cls("level-item", skillInfo.level >= i + 1 && `level-${i + 1}`)}></div>
+                                                ))}
+                                            </div>
+                                        </div>
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
                 </div>

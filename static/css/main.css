@@ -2228,7 +2228,7 @@ ul.social-links li:last-child a {
     line-height: 1.1em;
     position: relative;
     float: left;
-    margin: 0 0 4px;
+    margin: 0 0 12px;
 }
 
 .skills-first-style .skill-container {
@@ -2251,20 +2251,38 @@ ul.social-links li:last-child a {
     line-height: 1.1em;
     position: relative;
     float: right;
-    margin: 0 0 4px;
+    margin: 0 0 12px;
     color: #888;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 8px;
 }
 
-.skills-first-style .skill-percentage {
-    background-color: #54CA95;
-    border: 2px solid #fff;
-    -moz-border-radius: 9px;
-    -webkit-border-radius: 9px;
-    border-radius: 9px;
-    height: 8px;
-    padding: 0;
+.skills-first-style .skill-value .skill-level {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    gap: 4px;
 }
 
+.skills-first-style .skill-value .skill-level .level-item {
+    width: 40px;
+    height: 1em;
+    background-color: #e5e5e5;
+}
+
+.skills-first-style .skill-value .skill-level .level-item.level-1 {
+    background-color: #bff1db;
+}
+
+.skills-first-style .skill-value .skill-level .level-item.level-2 {
+    background-color: #5cda93;
+}
+
+.skills-first-style .skill-value .skill-level .level-item.level-3 {
+    background-color: #28a745;
+}
 
 /* =======================================
 6.3. Services
