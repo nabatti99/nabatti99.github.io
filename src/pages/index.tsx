@@ -58,6 +58,59 @@ const HomePage: React.FC<PageProps> = () => {
         },
     ];
 
+    const languagesAndFrameworksContents = [
+        {
+            name: "HTML",
+            logo: "/img/programming-languages/html-logo.png",
+            link: "https://www.w3.org/html",
+        },
+        {
+            name: "CSS",
+            logo: "/img/programming-languages/css-logo.png",
+            link: "https://www.w3.org/style/css",
+        },
+        {
+            name: "JavaScript",
+            logo: "/img/programming-languages/js-logo.png",
+            link: "https://www.javascript.com",
+        },
+        {
+            name: "Python",
+            logo: "/img/programming-languages/python-logo.png",
+            link: "https://www.python.org",
+        },
+        {
+            name: "C#",
+            logo: "/img/programming-languages/c-sharp-logo.png",
+            link: "https://docs.microsoft.com/en-us/dotnet/csharp",
+        },
+        {
+            name: "ReactJS",
+            logo: "/img/programming-languages/reactjs-logo.png",
+            link: "https://reactjs.org",
+        },
+        {
+            name: "NextJS",
+            logo: "/img/programming-languages/nextjs-logo.png",
+            link: "https://reactjs.org",
+        },
+        {
+            name: "Tensorflow",
+            logo: "/img/programming-languages/tensorflow-logo.png",
+            link: "https://www.tensorflow.org",
+        },
+        {
+            name: "PostgreSQL",
+            logo: "/img/programming-languages/postgresql-logo.png",
+            link: "https://www.postgresql.org",
+        },
+        {
+            name: "MongoDB",
+            logo: "/img/programming-languages/mongodb-logo.png",
+            link: "https://www.mongodb.com",
+        },
+    ];
+
     return (
         <PageBody>
             <div id="content" className="page-content site-content single-post" role="main">
@@ -164,55 +217,21 @@ const HomePage: React.FC<PageProps> = () => {
                 {/* <!-- Languages & Frameworks --> */}
                 <div className="row">
                     <div className="col-xs-12 col-sm-12">
-                        {/* <!-- Clients Slider --> */}
                         <div className="block-title p-20">
                             <h2>Languages & Frameworks</h2>
                         </div>
 
-                        <div id="clients_1" className="clients owl-carousel" data-mobile-items="1" data-tablet-items="3" data-items="6">
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="Golden Grid">
-                                    <img src="/img/clients/client-1.png" alt="Golden Grid" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="Sweety">
-                                    <img src="/img/clients/client-2.png" alt="Sweety" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="Magic Furnitures">
-                                    <img src="/img/clients/client-3.png" alt="Magic Furnitures" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="LifeGuard">
-                                    <img src="/img/clients/client-4.png" alt="LifeGuard" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="LESS">
-                                    <img src="/img/clients/client-5.png" alt="LESS" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="Design Lovers">
-                                    <img src="/img/clients/client-6.png" alt="Design Lovers" />
-                                </a>
-                            </div>
-
-                            <div className="client-block">
-                                <a href="#" target="_blank" title="WordPress">
-                                    <img src="/img/clients/client-7.png" alt="WordPress" />
-                                </a>
-                            </div>
+                        {/* <!-- Slider --> */}
+                        <div id="clients_1" className="clients owl-carousel" data-mobile-items="1" data-tablet-items="3" data-items={languagesAndFrameworksContents.length}>
+                            {languagesAndFrameworksContents.map((content) => (
+                                <div key={content.name} className="client-block">
+                                    <a href={content.link} target="_blank" title={content.name}>
+                                        <img src={content.logo} alt={content.name} />
+                                    </a>
+                                </div>
+                            ))}
                         </div>
-                        {/* <!-- /Clients Slider --> */}
+                        {/* <!-- /Slider --> */}
                     </div>
                 </div>
                 {/* <!-- /Languages & Frameworks --> */}
