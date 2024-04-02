@@ -188,6 +188,9 @@
     $(".preloader").fadeOut( 800, "linear" );
     animateLayout();
 
+    const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
+    Array.from(tooltipTriggerList).map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
+
     $(window)
         .on('hashchange', function(event) {
             if(location.hash) {
