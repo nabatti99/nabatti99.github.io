@@ -43,10 +43,22 @@ const ResumePage: React.FC<PageProps> = () => {
         },
         {
             name: "Python",
-            level: "intermediate",
+            level: "advanced",
         },
         {
             name: "Tensorflow",
+            level: "intermediate",
+        },
+        {
+            name: "System Architecture",
+            level: "intermediate",
+        },
+        {
+            name: "Database Design",
+            level: "intermediate",
+        },
+        {
+            name: "Data Analysis",
             level: "intermediate",
         },
         {
