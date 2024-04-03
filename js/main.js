@@ -191,12 +191,12 @@
     const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
     Array.from(tooltipTriggerList).map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl))
 
-    $(window)
-        .on('hashchange', function(event) {
-            if(location.hash) {
-                ajaxLoader();
-            }
-        });
+    // $(window)
+    //     .on('hashchange', function(event) {
+    //         if(location.hash) {
+    //             ajaxLoader();
+    //         }
+    //     });
 
 
     // On Document Load
@@ -409,7 +409,7 @@
 
         $('body').append('<div id="page-ajax-loaded" class="page-portfolio-loaded animated fadeInLeft" style="display: none"><div class="preloader-portfolio"><div class="preloader-animation"><div class="preloader-spinner"></div></div></div></div>');
 
-        ajaxLoader();
+        // ajaxLoader();
 
         // Sidebar toggle
         $('.sidebar-toggle').on("click", function () {

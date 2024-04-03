@@ -2768,9 +2768,30 @@ ul.social-links li:last-child a {
     background-color: #fff;
     color: #222;
     font-size: 11px;
+    font-weight: 700;
     line-height: 1.2em;
     bottom: 20px;
     left: 20px;
+    position: absolute;
+    border-radius: 5px;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.portfolio-grid figure .description {
+    display: inline-block;
+    padding: 3px 7px;
+    background-color: #fff;
+    color: #222;
+    font-size: 11px;
+    line-height: 1.2em;
+    bottom: 40px;
+    left: 20px;
+    right: 20px;
     position: absolute;
     border-radius: 5px;
     opacity: 0;
@@ -2786,9 +2807,8 @@ ul.social-links li:last-child a {
     left: 10px;
 }
 
-
-.portfolio-grid figure:hover i,
-.portfolio-grid figure:hover .category {
+.portfolio-grid figure:hover .category,
+.portfolio-grid figure:hover .description {
     opacity: 1;
 }
 
