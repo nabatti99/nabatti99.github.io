@@ -2663,6 +2663,7 @@ ul.social-links li:last-child a {
 
 .portfolio-grid figure:hover img {
     transform: scale(1.2);
+    filter: saturate(0.5) brightness(0.7);
 }
 
 .portfolio-grid figure a {
