@@ -5,6 +5,10 @@ import PageHead from "../components/page-head/page-head";
 import { projects } from "../data/projects.data";
 
 const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({ pageContext }) => {
+    const projectIndex = projects.findIndex((project) => project.name === pageContext.name);
+    const nextProject = projects[(projectIndex + 1) % projects.length];
+    const prevProject = projects[(projectIndex - 1 + projects.length) % projects.length];
+
     React.useEffect(() => {
         const key = "project_detail_js";
         document.getElementById(key)?.remove();
@@ -23,10 +27,10 @@ const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({
                     <div className="ajax-page-wrapper">
                         <div className="ajax-page-nav">
                             <div className="nav-item ajax-page-prev-next">
-                                <a className="ajax-page-load" href="portfolio-project-3.html">
+                                <a href={`/projects/${prevProject.slug}`}>
                                     <i className="lnr lnr-chevron-left"></i>
                                 </a>
-                                <a className="ajax-page-load" href="portfolio-project-2.html">
+                                <a href={`/projects/${nextProject.slug}`}>
                                     <i className="lnr lnr-chevron-right"></i>
                                 </a>
                             </div>
@@ -43,15 +47,19 @@ const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({
 
                         <div className="row">
                             <div className="col-sm-8 col-md-8 portfolio-block">
-                                <div className="owl-carousel portfolio-page-carousel" data->
-                                    <div className="item">
-                                        <img src={pageContext.imageUrl} alt={pageContext.name} />
+                                {pageContext.imageUrl && (
+                                    <div className="owl-carousel portfolio-page-carousel" data->
+                                        <div className="item">
+                                            <img src={pageContext.imageUrl} alt={pageContext.name} />
+                                        </div>
                                     </div>
-                                </div>
+                                )}
 
-                                {/* <div className="portfolio-page-video embed-responsive embed-responsive-16by9">
-                                    <iframe className="embed-responsive-item" src="https://player.vimeo.com/video/97102654?autoplay=0"></iframe>
-                                </div> */}
+                                {pageContext.youtube && (
+                                    <div className="portfolio-page-video embed-responsive embed-responsive-16by9">
+                                        <iframe className="embed-responsive-item" src={pageContext.youtube} title={pageContext.name}></iframe>
+                                    </div>
+                                )}
 
                                 <script src="./index.js" type="text/javascript"></script>
                             </div>
@@ -63,17 +71,9 @@ const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({
                                         <h3>Description</h3>
                                     </div>
                                     <ul className="project-general-info">
-                                        {/* <li>
-                                            <p>
-                                                <i className="fa fa-globe"></i>{" "}
-                                                <a href="#" target="_blank">
-                                                    www.project-site.com
-                                                </a>
-                                            </p>
-                                        </li> */}
                                         <li>
                                             <p>
-                                                <i className="fa fa-calendar"></i> 25 december, 2016
+                                                <i className="fa fa-calendar"></i> {pageContext.date}
                                             </p>
                                         </li>
                                     </ul>
@@ -97,17 +97,19 @@ const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({
                                     {/* <!-- /Technology --> */}
 
                                     {/* <!-- Share Buttons --> */}
-                                    {/* <div className="btn-group share-buttons">
-                                        <a href="#" target="_blank" className="btn">
-                                            <i className="fab fa-facebook-f"></i>{" "}
-                                        </a>
-                                        <a href="#" target="_blank" className="btn">
-                                            <i className="fab fa-twitter"></i>{" "}
-                                        </a>
-                                        <a href="#" target="_blank" className="btn">
-                                            <i className="fab fa-dribbble"></i>{" "}
-                                        </a>
-                                    </div> */}
+                                    <div className="btn-group share-buttons">
+                                        {pageContext.github && (
+                                            <a href={pageContext.github} target="_blank" className="btn">
+                                                <i className="fab fa-github"></i>{" "}
+                                            </a>
+                                        )}
+
+                                        {pageContext.website && (
+                                            <a href={pageContext.website} target="_blank" className="btn">
+                                                <i className="fas fa-website"></i>{" "}
+                                            </a>
+                                        )}
+                                    </div>
                                     {/* <!-- /Share Buttons --> */}
                                 </div>
                                 {/* <!-- Project Description --> */}

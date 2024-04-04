@@ -50,8 +50,8 @@ const ProjectPage: React.FC<PageProps> = () => {
                                 {projects.map((project) => (
                                     <figure key={project.name} className="item standard" data-groups={JSON.stringify(project.filterCategories)}>
                                         <div className="portfolio-item-img">
-                                            <img src={project.imageUrl} alt={project.name} title={project.name} />
-                                            <a href={project.slug} className="ajax-page-load"></a>
+                                            <img src={project.thumbnail} alt={project.name} title={project.name} />
+                                            <a href={project.slug}></a>
                                         </div>
 
                                         <h4 className="name">{project.name}</h4>
