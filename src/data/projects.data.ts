@@ -5,6 +5,11 @@ export enum ProjectFilterCategory {
     PERSONAL = "project_personal",
     PASSGENIX_SOLUTIONS = "project_passgenix_solutions",
     NAPA_GLOBAL = "project_napa_global",
+    WEB_DEVELOPMENT = "project_web_development",
+    MOBILE_DEVELOPMENT = "project_mobile_development",
+    AI_AND_ML = "project_ai_and_ml",
+    DATA_ANALYZING = "project_data_analyzing",
+    BLOCKCHAIN = "project_blockchain",
 }
 
 export type Project = {
@@ -27,7 +32,7 @@ export type Project = {
 export const projects: Project[] = [
     {
         name: "Team project: Ancv - WREF",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL, ProjectFilterCategory.MOBILE_DEVELOPMENT, ProjectFilterCategory.AI_AND_ML],
         description: "An agricultural mobile application ecosystem that provides free mobile applications to farmers as well as the agricultural service industry in Vietnam.",
         clientLogo: "/img/clients/ancv-wref.png",
         thumbnail: "/img/projects/ancv-wref/thumbnail.jpg",
@@ -41,7 +46,7 @@ export const projects: Project[] = [
     },
     {
         name: "Drought Prediction Application",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL, ProjectFilterCategory.AI_AND_ML, ProjectFilterCategory.DATA_ANALYZING],
         description: "Research and build a mobile application to solve the drought problem in agricultural field.",
         thumbnail: "/img/projects/drought-prediction-application/thumbnail.jpg",
         clientLogo: "/img/clients/my-project.png",
@@ -54,7 +59,13 @@ export const projects: Project[] = [
     },
     {
         name: "Flood Detection Application",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL],
+        filterCategories: [
+            ProjectFilterCategory.ALL,
+            ProjectFilterCategory.PERSONAL,
+            ProjectFilterCategory.MOBILE_DEVELOPMENT,
+            ProjectFilterCategory.AI_AND_ML,
+            ProjectFilterCategory.DATA_ANALYZING,
+        ],
         description: "Research and build a mobile application to solve the flood problem in city area.",
         thumbnail: "/img/projects/flood-detection-application/thumbnail.jpg",
         clientLogo: "/img/clients/my-project.png",
@@ -69,7 +80,7 @@ export const projects: Project[] = [
     },
     {
         name: "Capstone Project: HomeLab.ai",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PERSONAL, ProjectFilterCategory.WEB_DEVELOPMENT, ProjectFilterCategory.AI_AND_ML],
         description: "A web application that help designers reduce time when prepare an idea and make an architecture design for their customer.",
         thumbnail: "/img/projects/homelab-ai/thumbnail.jpg",
         clientLogo: "/img/clients/homelab-ai.png",
@@ -83,7 +94,7 @@ export const projects: Project[] = [
     },
     {
         name: "Napa Global: SoulBound NFT",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL, ProjectFilterCategory.WEB_DEVELOPMENT, ProjectFilterCategory.BLOCKCHAIN],
         description: "NFT Web-app rewarding for contributor who devoted to a project.",
         position: "Blockchain Developer, Web Developer, BE Developer, Maintainer",
         thumbnail: "/img/projects/napa-soulbound-nft/thumbnail.jpg",
@@ -97,7 +108,7 @@ export const projects: Project[] = [
     },
     {
         name: "Napa Global: Face Recognition",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL, ProjectFilterCategory.AI_AND_ML],
         description: "The internal face recognition system for Napa Global company.",
         clientLogo: "/img/clients/napa-global.png",
         thumbnail: "/img/projects/napa-face-recognition/thumbnail.jpg",
@@ -110,7 +121,7 @@ export const projects: Project[] = [
     },
     {
         name: "Napa Global: Gamify",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL, ProjectFilterCategory.WEB_DEVELOPMENT, ProjectFilterCategory.BLOCKCHAIN],
         description: "A blockchain platform for gamer.",
         thumbnail: "/img/projects/napa-gamify/thumbnail.jpg",
         clientLogo: "/img/clients/napa-global.png",
@@ -123,7 +134,7 @@ export const projects: Project[] = [
     },
     {
         name: "Passgenix Solutions: The Rike",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PASSGENIX_SOLUTIONS],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.PASSGENIX_SOLUTIONS, ProjectFilterCategory.WEB_DEVELOPMENT, ProjectFilterCategory.DATA_ANALYZING],
         description: "Bring products of Vietnamese farmers to the US market.",
         thumbnail: "/img/projects/passgenix-the-rike/thumbnail.jpg",
         clientLogo: "/img/clients/the-rike.png",
@@ -137,7 +148,13 @@ export const projects: Project[] = [
     },
     {
         name: "Napa Global: Datasource",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL],
+        filterCategories: [
+            ProjectFilterCategory.ALL,
+            ProjectFilterCategory.NAPA_GLOBAL,
+            ProjectFilterCategory.WEB_DEVELOPMENT,
+            ProjectFilterCategory.BLOCKCHAIN,
+            ProjectFilterCategory.DATA_ANALYZING,
+        ],
         description: "A blockchain-based hackathon platform.",
         thumbnail: "/img/projects/napa-datasource/thumbnail.jpg",
         clientLogo: "/img/clients/napa-global.png",
@@ -151,7 +168,7 @@ export const projects: Project[] = [
     },
     {
         name: "Napa Global: MPC-CMP Wallet",
-        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL],
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.NAPA_GLOBAL, ProjectFilterCategory.BLOCKCHAIN],
         description: "Create a blockchain-base security wallet using MPC-CMP algorithm.",
         thumbnail: "/img/projects/napa-mpc-cmp-wallet/thumbnail.jpg",
         clientLogo: "/img/clients/napa-global.png",

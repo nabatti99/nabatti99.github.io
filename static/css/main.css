@@ -64,6 +64,23 @@ body {
     overflow-x: hidden;
 }
 
+.text-ellipsis {
+	--line-clamp: 1;
+	-webkit-line-clamp: var(--line-clamp);
+	-webkit-box-orient: vertical;
+	display: -webkit-box;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.text-ellipsis.line-clamp-2 {
+	--line-clamp: 2;
+}
+
+.text-ellipsis.line-clamp-3 {
+	--line-clamp: 3;
+}
+
 /* Body Animated Background */
 .lm-animated-bg {
     position: absolute;
@@ -2107,6 +2124,15 @@ ul.social-links li:last-child a {
     vertical-align: middle;
 }
 
+.project-item-content-logo {
+    height: 100px;
+}
+
+.project-item-content-logo img {
+    object-fit: contain;
+    height: 100%;
+}
+
 .project-item-title h4 {
     font-size: 16px;
     margin: 0 0 5px;
@@ -2781,6 +2807,7 @@ ul.social-links li:last-child a {
     -o-transition: all 0.3s ease-in-out;
     -ms-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    max-width: 86%;
 }
 
 .portfolio-grid figure .description {

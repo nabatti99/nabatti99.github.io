@@ -224,11 +224,14 @@ const HomePage: React.FC<PageProps> = () => {
                         <div key={content.name} className=" col-xs-12 col-sm-9">
                             <a href={`/projects/${content.slug}`}>
                                 <div className="project-items clearfix">
-                                    <div className="project-item-logo">
+                                    <div className="project-item-logo d-none d-md-table-cell">
                                         <img src={content.clientLogo} alt="logo" />
                                     </div>
-
                                     <div className="project-item-content">
+                                        <div className="project-item-content-logo d-md-none mb-4">
+                                            <img src={content.clientLogo} alt="logo" />
+                                        </div>
+
                                         <div className="project-item-title">
                                             <h4>{content.name}</h4>
                                         </div>

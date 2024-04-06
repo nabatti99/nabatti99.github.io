@@ -207,17 +207,21 @@ const ResumePage: React.FC<PageProps> = () => {
 
                             <div className="timeline-item clearfix">
                                 <h5 className="item-period">2022 - 2023</h5>
-                                <a href="https://therike.com" target="_blank" className="item-company">
-                                    TheRike Online Tea Shop
+                                <a href="https://passgenix.com" target="_blank" className="item-company">
+                                    Passgenix Solutions
                                 </a>
-                                <h4 className="item-title">Technical Leader</h4>
-                                <p>Led the technical development of an e-commerce platform for a tea and seed retailer.</p>
+                                <h4 className="item-title">Co-founder & Technical Leader</h4>
                                 <p>
-                                    Involved building the online shop website, integrating with both Amazon and Shopify for expanded reach, and automating previously manual
-                                    processes to improve efficiency.
+                                    <strong>Strong Developer Team:</strong> Work closely with our developers and designers to translate creative vision into robust technical
+                                    solutions. Strive to push boundaries and develop products that make a real impact.
                                 </p>
                                 <p>
-                                    Additionally, established a system for tracking, storing and reporting sales data, providing valuable insights for monthly and annual analysis.
+                                    <strong>Follow Trend Technology:</strong> Guide the technical direction to ensure that our products are built with the latest technologies and
+                                    best practices. Maintain the highest quality standards in our technological infrastructure and product development.
+                                </p>
+                                <p>
+                                    Gained experience to leverage a deep understanding of the industry and its challenges. Constantly seeking innovative ways to advance our
+                                    technology and its potential and using technology to solve real-world problems.
                                 </p>
                             </div>
 
@@ -399,7 +403,7 @@ const ResumePage: React.FC<PageProps> = () => {
                                     <div key={index} className="clearfix">
                                         <h4>{skill.name}</h4>
                                         <div className="skill-value" data-bs-toggle="tooltip" data-bs-title={skillInfo.tooltip} data-bs-placement="right">
-                                            <span>{upperCaseFirstLetter(skill.level)}</span>
+                                            <span className="d-none d-md-block">{upperCaseFirstLetter(skill.level)}</span>
                                             <div className="skill-level">
                                                 {[...Array(3)].map((_, i) => (
                                                     <div key={index} className={cls("level-item", skillInfo.level >= i + 1 && `level-${i + 1}`)}></div>
@@ -424,7 +428,7 @@ const ResumePage: React.FC<PageProps> = () => {
                                     <div key={index} className="clearfix">
                                         <h4>{skill.name}</h4>
                                         <div className="skill-value" data-bs-toggle="tooltip" data-bs-title={skill.tooltip} data-bs-placement="right">
-                                            <span>{upperCaseFirstLetter(skill.level)}</span>
+                                            <span className="d-none d-md-block">{upperCaseFirstLetter(skill.level)}</span>
                                             <div className="skill-level">
                                                 {[...Array(3)].map((_, i) => (
                                                     <div key={index} className={cls("level-item", skillInfo.level >= i + 1 && `level-${i + 1}`)}></div>

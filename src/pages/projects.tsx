@@ -10,7 +10,7 @@ const ProjectPage: React.FC<PageProps> = () => {
             <div className="page-title">
                 <h1>My Projects</h1>
                 <div className="page-subtitle">
-                    <h4>What I have done recently.</h4>
+                    <h4>What I have done recently</h4>
                 </div>
             </div>
 
@@ -43,6 +43,31 @@ const ProjectPage: React.FC<PageProps> = () => {
                                         NAPA Global
                                     </a>
                                 </li>
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.WEB_DEVELOPMENT}>
+                                        Web Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.MOBILE_DEVELOPMENT}>
+                                        Mobile Development
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.AI_AND_ML}>
+                                        AI & ML
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.DATA_ANALYZING}>
+                                        Data Analyzing
+                                    </a>
+                                </li>
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.BLOCKCHAIN}>
+                                        Blockchain
+                                    </a>
+                                </li>
                             </ul>
 
                             {/* <!-- Portfolio Grid --> */}
@@ -56,7 +81,7 @@ const ProjectPage: React.FC<PageProps> = () => {
 
                                         <h4 className="name">{project.name}</h4>
                                         <p className="description">{project.description}</p>
-                                        <span className="category">{project.position}</span>
+                                        <span className="category text-ellipsis">{project.position}</span>
                                     </figure>
                                 ))}
                             </div>

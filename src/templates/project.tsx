@@ -23,7 +23,7 @@ const ProjectDetailPage: React.FC<PageProps<unknown, (typeof projects)[0]>> = ({
     return (
         <PageBody>
             <div id="content" className="page-content site-content single-post" role="main">
-                <div id="ajax-page" className="ajax-page-content">
+                <div id="ajax-page" className="ajax-page-content mt-4">
                     <div className="ajax-page-wrapper">
                         <div className="ajax-page-nav">
                             <div className="nav-item ajax-page-prev-next">
