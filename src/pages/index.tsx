@@ -2,61 +2,37 @@ import { HeadFC, PageProps } from "gatsby";
 import * as React from "react";
 import PageBody from "../components/page-body/page-body";
 import PageHead from "../components/page-head/page-head";
+import { projects } from "../data/projects.data";
 
 const HomePage: React.FC<PageProps> = () => {
     const whatICanDoContents = [
         {
             icon: "linecons-display",
-            title: "Full-stack Web Development",
+            title: "Full-stack Development",
             description:
-                "Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.",
+                "Well-versed in both front-end technologies like HTML, CSS, and JavaScript, and back-end languages and frameworks. Implement user-friendly interfaces, build robust functionality, and ensure seamless data handling within web applications.",
         },
         {
             icon: "linecons-data",
             title: "Data Analyzing",
             description:
-                "Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.",
+                "With strong data analysis skills. Can clean, explore, and analyze complex datasets, leveraging statistical methods to uncover trends and patterns. Creating clear and compelling data visualizations to communicate findings effectively.",
         },
         {
-            icon: "linecons-eye",
-            title: "Computer Vision",
+            icon: "linecons-bulb",
+            title: "AI Engineering",
             description:
-                "Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.",
+                "Strong background in AI engineering. Bridge the gap between theoretical AI concepts and real-world applications. Skilled in building, deploying, and optimizing machine learning models, along with designing and managing the infrastructure.",
         },
         {
             icon: "linecons-world",
             title: "Blockchain",
             description:
-                "Mauris neque libero, aliquet vel mollis nec, euismod sed tellus. Mauris convallis dictum elit id volutpat. Vivamus blandit, dolor vitae lacinia maximus, risus velit vehicula odio, a tincidunt turpis turpis tempus ex.",
+                "Strong understanding of blockchain architecture, cryptography principles, and smart contracts. Allows to develop innovative blockchain-based solutions, integrate them with existing systems, and ensure their security and efficiency.",
         },
     ];
 
-    const latestProjectsContents = [
-        {
-            title: "NAPA Global: MPC-CMP Wallet",
-            description: "Create a blockchain-base security wallet using MPC-CMP algorithm.",
-            position: "Technical leader (Wallet team)",
-            techStacks: ["OpenSSL", "MPC-Lib Cosigner (C++)", "AWS (Nitro, KMS, DynamoDB, Cognito)", "NodeJS (BE Server)", "Solidity (Blockchain)"],
-            date: "Nov.2023 - Mar.2024",
-            img: "/img/clients/client-7.png",
-        },
-        {
-            title: "NAPA Global: Datasource",
-            description: "A blockchain-based hackathon platform.",
-            position: "Full-stack web developer",
-            techStacks: ["Ruby", "MongoDB", "Flask (AI Server)"],
-            date: "Oct.2023 - Dec.2023",
-            img: "/img/clients/client-7.png",
-        },
-        {
-            title: "Startup : The Rike",
-            description: "Bring products of Vietnamese farmers to the US market.",
-            position: "Technical leader",
-            techStacks: ["NextJS (Client website)", "Shopify", "Amazon for Retailer (E-commerce platform)", "NestJS (BE)", "AppSheet (Admin)", "MongoDB"],
-            date: "Feb.2023 - Nov.2023",
-            img: "/img/clients/client-7.png",
-        },
-    ];
+    const latestProjectsContents = [...projects].sort((a, b) => b.endDate.getTime() - a.endDate.getTime()).slice(0, 3);
 
     const languagesAndFrameworksContents = [
         {
@@ -245,16 +221,16 @@ const HomePage: React.FC<PageProps> = () => {
                     </div>
 
                     {latestProjectsContents.map((content) => (
-                        <div key={content.title} className=" col-xs-12 col-sm-9">
-                            <a href="/project/id" className="lightbox">
+                        <div key={content.name} className=" col-xs-12 col-sm-9">
+                            <a href={`/projects/${content.slug}`}>
                                 <div className="project-items clearfix">
                                     <div className="project-item-logo">
-                                        <img src="/img/clients/client-7.png" alt="logo" />
+                                        <img src={content.clientLogo} alt="logo" />
                                     </div>
 
                                     <div className="project-item-content">
                                         <div className="project-item-title">
-                                            <h4>{content.title}</h4>
+                                            <h4>{content.name}</h4>
                                         </div>
 
                                         <div className="project-item-description">

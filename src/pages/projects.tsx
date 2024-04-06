@@ -56,7 +56,7 @@ const ProjectPage: React.FC<PageProps> = () => {
 
                                         <h4 className="name">{project.name}</h4>
                                         <p className="description">{project.description}</p>
-                                        <span className="category">{project.category}</span>
+                                        <span className="category">{project.position}</span>
                                     </figure>
                                 ))}
                             </div>

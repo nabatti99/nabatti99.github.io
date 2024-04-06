@@ -23,7 +23,7 @@ const ContactPage: React.FC<PageProps> = () => {
                                 </div>
                                 <div className="ci-text">
                                     <h4>(+84) 94 667 2181</h4>
-                                    <p>Call me on working time.</p>
+                                    <p>Reach out to me during business hours.</p>
                                 </div>
                             </div>
 
