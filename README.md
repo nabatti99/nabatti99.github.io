@@ -4,10 +4,12 @@
   </a>
 </p>
 <h1 align="center">
-  Template Frontend using GatsbyJS with HTML and TailwindCSS
+  Nguyễn Lê Anh Minh's Portfolio
 </h1>
 
-Kick off your project with this default boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+A website to introduce about me, my experiences, my projects and anything you want to know.
+
+If you want to run int on your computer, let see the quick guide below.
 
 ## 🚀 Quick start
 
@@ -17,15 +19,21 @@ Kick off your project with this default boilerplate. This starter ships with the
 # Install NodeJS
 nvm install lts/hydrogen
 
-# Using NodeJS
+# Use NodeJS
 nvm use lts/hydrogen
+
+# Enable Corepack
+corepack enable
 ```
 
 **Install libraries**
 
-    Using `yarn` as node package manager.
+Using `yarn` as node package manager.
 
 ```shell
+# Get yarn version with this source
+yarn set version from sources
+
 # Install all packages
 yarn
 
@@ -75,7 +83,7 @@ A quick look at the top-level files and directories you'll see in a typical Gats
 
 1.  **`/src`**: This directory will contain all of the code related to what you will see on the front-end of your site (what you see in the browser) such as your site header or a page template. `src` is a convention for “source code”.
 
-2.  **`/static`**: This directory will contain all of the `assets` provided by themeforest.net package. After add files to this directory, you should update `page-body.tsx`, `page-head.tsx` and add the gatsby's config files.
+1.  **`/static`**: This directory will contain all of the `assets` provided by themeforest.net package. After add files to this directory, you should update `page-body.tsx`, `page-head.tsx` and add the gatsby's config files.
 
 1.  **`.gitignore`**: This file tells git which files it should not track / not maintain a version history for.
 
@@ -97,11 +105,13 @@ A quick look at the top-level files and directories you'll see in a typical Gats
 
 Looking for more guidance? Full documentation for Gatsby lives [on the website](https://www.gatsbyjs.com/). Here are some places to start:
 
-- **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
+-   **For most developers, we recommend starting with our [in-depth tutorial for creating a site with Gatsby](https://www.gatsbyjs.com/docs/tutorial/getting-started/).** It starts with zero assumptions about your level of ability and walks through every step of the process.
 
-- **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
+-   **To dive straight into code samples, head [to our documentation](https://www.gatsbyjs.com/docs/).** In particular, check out the _Guides_, _API Reference_, and _Advanced Tutorials_ sections in the sidebar.
 
 ## 💫 Deploy
+
+Already prepared Github Action for deploy this website to Github Page. If you want to run this action, please enable it in `.github/deploy-github-page.yml` and change the repository to `your-username.github.io`.
 
 [Build, Deploy, and Host On Github Page](https://pages.github.com/)
 
