@@ -1437,13 +1437,14 @@ td {
 .page-title .page-subtitle {
     display: inline-block;
     top: 0;
-    right: 70px;
+    width: 80%;
 }
 
 .page-title .page-subtitle h4 {
     color: #aaa;
     font-weight: 400;
     font-size: 14px;
+    line-height: 150%;
     margin: 1.33em 0;
 }
 
@@ -2051,6 +2052,20 @@ ul.social-links li:last-child a {
     border-radius: 30px;
 }
 
+.timeline-item h5.item-paper {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+    font-weight: 500;
+    margin: 0 0 5px -40px;
+    color: #666;
+    background-color: #fff;
+    padding: 0 10px;
+    line-height: 23px;
+    border: 2px solid #54CA95;
+    border-radius: 30px;
+}
+
 .timeline-item .item-company {
     display: inline-block;
     font-size: 12px;
@@ -2061,6 +2076,20 @@ ul.social-links li:last-child a {
 
 .timeline-item a.item-company:hover {
     color: #28a745;
+}
+
+.timeline-item a {
+    color: #666;
+    opacity: 0.7;
+}
+
+.timeline-item a:hover {
+    color: #28a745;
+}
+
+.timeline-item h5.item-paper ~ a {
+    opacity: 1;
+    display: block;
 }
 
 .timeline-item .item-title {
@@ -5644,10 +5673,11 @@ a.post-thumbnail:hover {
     .page-title .page-subtitle {
         position: relative;
         right: auto;
+        width: 100%;
     }
 
     .page-title .page-subtitle h4 {
-        margin: 5px 0;
+        margin: 12px 0;
     }
 
     .single-post .site-content .post-content {
