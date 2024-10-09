@@ -37,7 +37,11 @@ const ProjectPage: React.FC<PageProps> = () => {
                                         Passgenix Solutions
                                     </a>
                                 </li>
-
+                                <li>
+                                    <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.DATAHOUSE_ASIA}>
+                                        DataHouse Asia
+                                    </a>
+                                </li>
                                 <li>
                                     <a className="filter btn btn-sm btn-link" data-group={ProjectFilterCategory.NAPA_GLOBAL}>
                                         NAPA Global

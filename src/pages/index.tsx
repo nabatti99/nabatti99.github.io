@@ -7,6 +7,12 @@ import { projects } from "../data/projects.data";
 const HomePage: React.FC<PageProps> = () => {
     const whatICanDoContents = [
         {
+            icon: "linecons-bulb",
+            title: "AI Engineering",
+            description:
+                "Strong background in AI engineering. Bridge the gap between theoretical AI concepts and real-world applications. Skilled in building, deploying, and optimizing machine learning models, along with designing and managing the infrastructure.",
+        },
+        {
             icon: "linecons-display",
             title: "Full-stack Development",
             description:
@@ -17,12 +23,6 @@ const HomePage: React.FC<PageProps> = () => {
             title: "Data Analyzing",
             description:
                 "With strong data analysis skills. Can clean, explore, and analyze complex datasets, leveraging statistical methods to uncover trends and patterns. Creating clear and compelling data visualizations to communicate findings effectively.",
-        },
-        {
-            icon: "linecons-bulb",
-            title: "AI Engineering",
-            description:
-                "Strong background in AI engineering. Bridge the gap between theoretical AI concepts and real-world applications. Skilled in building, deploying, and optimizing machine learning models, along with designing and managing the infrastructure.",
         },
         {
             icon: "linecons-world",
@@ -124,8 +124,9 @@ const HomePage: React.FC<PageProps> = () => {
 
                                         <h1>Nguyen Le Anh Minh</h1>
                                         <p>
-                                            Eager to adopt and learn new technologies. Enthusiastic to attend a Master of Computer Science in order to understand and apply
-                                            different Computer Science concepts.
+                                            Hello! I'm Minh, a passionate individual who loves exploring and applying new technologies. This portfolio showcases my projects,
+                                            skills, and experiences through learning and working. I'm seeking opportunities to contribute my expertise and grow in a professional
+                                            environment.
                                         </p>
 
                                         <div className="home-buttons">

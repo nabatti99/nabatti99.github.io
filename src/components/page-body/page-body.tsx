@@ -71,6 +71,10 @@ const PageBody: React.FC<{
                                     </li>
 
                                     <li className="menu-item">
+                                        <a href="/researches">Researches</a>
+                                    </li>
+
+                                    <li className="menu-item">
                                         <a href="/projects">Projects</a>
                                     </li>
 

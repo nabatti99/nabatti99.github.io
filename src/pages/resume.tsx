@@ -4,6 +4,7 @@ import PageBody from "../components/page-body/page-body";
 import PageHead from "../components/page-head/page-head";
 import { upperCaseFirstLetter } from "../utilities/text.util";
 import cls from "classnames";
+import { languages } from "../data/languages.data";
 
 const ResumePage: React.FC<PageProps> = () => {
     const codingSkillInfos = {
@@ -116,7 +117,11 @@ const ResumePage: React.FC<PageProps> = () => {
             <div className="page-title">
                 <h1>Nguyen Le Anh Minh</h1>
                 <div className="page-subtitle">
-                    <h4>About 2 Years of Experience</h4>
+                    <h4>
+                        With 2 year of Work Experience, this page highlights my ability at Software Engineer skills and my achievements. My experiences have equipped me with a
+                        strong foundation in Software Development, AI, and Blockchain technologies. And I am eager to apply my skills to new challenges and contribute to your
+                        team's success.
+                    </h4>
                 </div>
             </div>
 
@@ -129,16 +134,36 @@ const ResumePage: React.FC<PageProps> = () => {
 
                         <div id="timeline_1" className="timeline clearfix">
                             <div className="timeline-item clearfix">
+                                <h5 className="item-period">2024 - Now</h5>
+                                <a href="https://dut.udn.vn" target="_blank" className="item-company">
+                                    ProtonX Online School
+                                </a>
+                                <h4 className="item-title">AI Engineer</h4>
+                                <p>
+                                    Delve deeper into the fundamental concepts of Natural Language Processing. Learn how to preprocess text data, extract features from text, and
+                                    build machine learning models for common NLP task. Build a LLM model at the end of the course.
+                                </p>
+                            </div>
+
+                            <div className="timeline-item clearfix">
                                 <h5 className="item-period">2018 - 2023</h5>
                                 <a href="https://dut.udn.vn" target="_blank" className="item-company">
                                     Danang University of Science and Technology (DUT)
                                 </a>
                                 <h4 className="item-title">Software Engineer</h4>
-                                <p>
+                                <p className="mt-3">
                                     <strong>GPA:</strong> 3.44/4.0
                                 </p>
+                                <p>
+                                    <strong>Graduation Thesis:</strong> (Scored: 9.6/10, Ranked: 1){" "}
+                                    <a href="https://drive.google.com/drive/folders/19LhopEKWXQ0R2v5ZIFCrftH3ai7I-x41?usp=sharing" target="_blank">
+                                        Application of Artificial Intelligence and Blockchain in Architectural Design Automation
+                                    </a>{" "}
+                                </p>
                                 <p>Merges computer science with engineering practices, empowering to design, develop, and implement robust software systems.</p>
-                                <p>Participate in many researches and contests. Learned how to build a software by combining technology and SDLC.</p>
+                                <p>
+                                    Participate in many researches and contests. Learned how to build a high-end software follow by <i>Software Development Life Circle</i> (SDLC).
+                                </p>
                             </div>
 
                             <div className="timeline-item clearfix">
@@ -181,12 +206,32 @@ const ResumePage: React.FC<PageProps> = () => {
 
                     <div className=" col-xs-12 col-sm-6 ">
                         <div className="block-title">
-                            <h2>Experience</h2>
+                            <h2>Working Experience</h2>
                         </div>
 
                         <div id="timeline_2" className="timeline clearfix">
                             <div className="timeline-item clearfix">
-                                <h5 className="item-period current">2022 - Current</h5>
+                                <h5 className="item-period current">2024 - Now</h5>
+                                <a href="https://www.datahouse.com" target="_blank" className="item-company">
+                                    DataHouse Asia
+                                </a>
+                                <h4 className="item-title">AI Engineer</h4>
+                                <p>
+                                    <strong>The First AI Engineer:</strong> Work on a wide range of AI projects, from early-stage prototyping to production deployment. Develop and
+                                    implement AI solutions for various applications, such as product recommendations, fraud detection, OCR and chatbot.
+                                </p>
+                                <p>
+                                    <strong>AWS Cloud Engineer:</strong> Design, build, deployed and managed AI projects with various AWS services. Designed and implemented
+                                    scalable and cost-effective AWS architectures.
+                                </p>
+                                <p>
+                                    <strong>Data Engineer: </strong> Collaborate closely with our data engineers to ensure the seamless integration of AI models into data
+                                    pipelines. Assist in preparing and cleaning datasets, optimizing model performance, and deploying AI solutions into production environments.
+                                </p>
+                            </div>
+
+                            <div className="timeline-item clearfix">
+                                <h5 className="item-period current">2022 - 2024</h5>
                                 <a href="https://www.napaglobal.com" target="_blank" className="item-company">
                                     NAPA Global
                                 </a>
@@ -224,23 +269,6 @@ const ResumePage: React.FC<PageProps> = () => {
                                     technology and its potential and using technology to solve real-world problems.
                                 </p>
                             </div>
-
-                            <div className="timeline-item clearfix">
-                                <h5 className="item-period">2020 - 2023</h5>
-                                <a href="https://dut.udn.vn/khoacntt" target="_blank" className="item-company">
-                                    Information Technology Faculty - DUT
-                                </a>
-                                <h4 className="item-title">Researcher</h4>
-                                <p>Motivated to explore the intersection of computer vision (CV) with AI in agriculture, GIS and remote sensing.</p>
-                                <p>
-                                    Driven by the potential to leverage CV techniques to analyze vast datasets from satellites and drones, ultimately contributing to more
-                                    sustainable and productive farming practices.
-                                </p>
-                                <p>
-                                    Developed innovative applications addressing farming issues and built a agricultural startup. Acquired several noteworthy certificates and
-                                    awards.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </div>
@@ -255,30 +283,28 @@ const ResumePage: React.FC<PageProps> = () => {
 
                 <div className="row">
                     <div className=" col-xs-12 col-sm-6 ">
-                        <a href="/img/resume/toeic-certificate.jpg" className="lightbox">
-                            <div className="certificate-item clearfix">
-                                <div className="certi-logo">
-                                    <img src="/img/resume/toeic-logo.png" alt="logo" />
-                                </div>
-
-                                <div className="certi-content">
-                                    <div className="certi-title">
-                                        <h4>TOEIC: 765 Points</h4>
+                        {languages.map((language) => (
+                            <a href={language.image} className="lightbox">
+                                <div className="certificate-item clearfix">
+                                    <div className="certi-logo">
+                                        <img src={language.logo} alt="logo" />
                                     </div>
 
-                                    <div className="certi-id">
-                                        <span>Valid until 27 February 2026</span>
-                                    </div>
-                                    <div className="certi-date">
-                                        <span>27 February 2024</span>
-                                    </div>
+                                    <div className="certi-content">
+                                        <div className="certi-title">
+                                            <h4>{language.title}</h4>
+                                        </div>
 
-                                    <div className="certi-company">
-                                        <span></span>
+                                        <div className="certi-id">
+                                            <span>Valid until {language.validUntil}</span>
+                                        </div>
+                                        <div className="certi-date">
+                                            <span>{language.issuedAt}</span>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </a>
+                            </a>
+                        ))}
                     </div>
                 </div>
 

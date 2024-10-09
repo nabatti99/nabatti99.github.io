@@ -1,10 +1,9 @@
-import { randomImgUrl } from "../utilities/text.util";
-
 export enum ProjectFilterCategory {
     ALL = "project_all",
     PERSONAL = "project_personal",
     PASSGENIX_SOLUTIONS = "project_passgenix_solutions",
     NAPA_GLOBAL = "project_napa_global",
+    DATAHOUSE_ASIA = "project_datahouse_asia",
     WEB_DEVELOPMENT = "project_web_development",
     MOBILE_DEVELOPMENT = "project_mobile_development",
     AI_AND_ML = "project_ai_and_ml",
@@ -178,5 +177,19 @@ export const projects: Project[] = [
         imageUrl: "/img/projects/napa-mpc-cmp-wallet/image.jpg",
         date: "Nov.2023 – Mar.2024",
         endDate: new Date("2024-03-01"),
+    },
+    {
+        name: "DataHouse Asia: VizERP AI",
+        filterCategories: [ProjectFilterCategory.ALL, ProjectFilterCategory.DATAHOUSE_ASIA, ProjectFilterCategory.AI_AND_ML],
+        description: "Build AI modules to enhance VizERP performance & experience.",
+        thumbnail: "/img/projects/datahouse-asia-vizerp-ai/thumbnail.jpg",
+        clientLogo: "/img/clients/vizerp.png",
+        position: "AI Developer",
+        techStacks: ["AWS (Lambda, SageMaker, Bedrock, Textract, Comprehend)", "Tesseract (OCR)", "LLama 3.2"],
+        slug: "datahouse-asia-vizerp-ai",
+        imageUrl: "/img/projects/datahouse-asia-vizerp-ai/thumbnail.jpg",
+        date: "July.2024 – Oct.2024",
+        endDate: new Date("2024-10-01"),
+        website: "https://www.vizerp.com",
     },
 ];
