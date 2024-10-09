@@ -1,7 +1,7 @@
 {
-    "name": "template-gatsby-html",
+    "name": "nabatti99-portfolio",
     "private": true,
-    "description": "A simple starter to integrate HTML from themeforest.net quickly with Gatsby and TailwindCSS",
+    "description": "A simple portfolio website built with Gatsby",
     "version": "0.1.0",
     "author": "Nguyen Le Anh Minh <anhminh2122000@gmail.com>",
     "dependencies": {
@@ -10,7 +10,6 @@
         "gatsby": "^5.13.3",
         "gatsby-plugin-image": "^3.13.1",
         "gatsby-plugin-sharp": "^5.13.1",
-        "gatsby-source-contentful": "^8.13.1",
         "gatsby-source-filesystem": "^5.13.1",
         "gatsby-transformer-sharp": "^5.13.1",
         "react": "^18.2.0",
